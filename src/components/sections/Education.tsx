@@ -1,0 +1,70 @@
+import { Calendar, GraduationCap, MapPin } from "lucide-react";
+import { education } from "../../data/content";
+import Reveal from "../ui/Reveal";
+import Section from "../ui/Section";
+
+export default function Education() {
+  return (
+    <Section id="education" title="Education" intro={education.intro}>
+      <div className="space-y-8">
+        {education.items.map((item) => (
+          <Reveal key={item.degree}>
+            <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 sm:p-8 transition-all hover:border-zinc-700">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-emerald-400 shrink-0">
+                    <GraduationCap size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">
+                      {item.degree}
+                    </h3>
+                    <p className="mt-1 font-medium text-emerald-400 text-sm">
+                      {item.institution}
+                    </p>
+                    {item.location && (
+                      <p className="mt-0.5 text-xs text-zinc-400 flex items-center gap-1.5">
+                        <MapPin size={12} className="text-zinc-500" />
+                        {item.location}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:items-end gap-1.5 shrink-0">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-zinc-950 px-3 py-1 text-xs font-semibold text-zinc-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    {item.status}
+                  </span>
+                  <span className="text-xs text-zinc-400 flex items-center gap-1">
+                    <Calendar size={12} />
+                    {item.period}
+                  </span>
+                </div>
+              </div>
+
+              {item.details && item.details.length > 0 && (
+                <div className="mt-6 pt-5 border-t border-zinc-800/80">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">
+                    Academic Focus &amp; Coursework
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {item.details.map((detail, idx) => (
+                      <li
+                        key={idx}
+                        className="text-xs leading-relaxed text-zinc-300 flex items-start gap-2"
+                      >
+                        <span className="text-emerald-400 mt-0.5">•</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </Section>
+  );
+}
