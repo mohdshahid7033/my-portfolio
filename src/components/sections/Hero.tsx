@@ -53,7 +53,7 @@ export default function Hero() {
               {profile.headline}
             </h2>
             <p className="text-xs sm:text-sm font-medium text-emerald-400">
-              Frontend-focused with Python &amp; DevOps Project Experience
+              {profile.role}
             </p>
           </div>
 
