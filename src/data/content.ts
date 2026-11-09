@@ -59,12 +59,14 @@ export const techStrip: string[] = [
   "HTML & CSS",
   "JAVASCRIPT",
   "REACT",
+  "TYPESCRIPT",
   "PYTHON",
-  "FLASK",
   "DOCKER",
-  "AWS",
   "GITHUB ACTIONS",
-  "POSTGRESQL",
+  "AWS",
+  "GIT",
+  "LINUX",
+  "SQL",
 ];
 
 export const about = {
@@ -100,86 +102,54 @@ export const about = {
 
 export const skills = {
   intro:
-    "An honest representation of my technical capabilities: clearly distinguishing independent programming proficiency, foundational knowledge, practical project exposure, and AI-assisted workflows.",
+    "An honest representation of my technical capabilities: clearly distinguishing independent programming proficiency, foundational knowledge, practical project exposure, and active learning.",
   categories: [
     {
       title: "Frontend Development",
-      level: "Independent Programming & Active Learning",
+      level: "Strong Foundation & Active Learning",
       experienceType: "Strong Knowledge & Independent Scripting",
       description:
-        "Strong knowledge of modern HTML and CSS layout systems. Capable of independently writing basic JavaScript programs and DOM interactions. Actively learning React component structures and basic TypeScript types through portfolio development.",
+        "Strong foundation in HTML and CSS layout systems. Capable of independently writing basic JavaScript programs and DOM interactions. Actively learning React component structures and basic TypeScript types.",
       skills: [
-        "HTML5 (Strong Knowledge)",
-        "CSS3 (Layouts, Flexbox, Grid)",
-        "JavaScript (Independent Basic Programming)",
-        "TypeScript (Familiar with basic types & interfaces)",
-        "React (Learning component structures & UI)",
+        "HTML & CSS (Strong Foundation)",
+        "JavaScript (Basic / Independent Programs)",
+        "React (Learning / Foundational)",
+        "TypeScript (Learning / Foundational)",
       ],
     },
     {
-      title: "Backend & Programming Foundations",
-      level: "Foundational & Guided",
-      experienceType: "Conceptual Knowledge & Guided Building",
+      title: "Backend & Programming",
+      level: "Foundational & Basic Knowledge",
+      experienceType: "Basic Syntax & Conceptual Understanding",
       description:
-        "Understands what backend systems do, client-server HTTP request cycles, and basic Python syntax. Requires assistance and guidance when structuring server programs and backend logic independently.",
+        "Basic programming knowledge in Python with an understanding of client-server architecture, HTTP request-response cycles, and foundational backend concepts. Familiar with relational table concepts and basic SQL queries through project exposure.",
       skills: [
-        "Python (Basic Syntax & Data Structures)",
-        "Backend Architecture Concepts",
-        "Flask (Project Exposure & Basic Routing)",
-        "Django (Exploration & Fundamentals)",
-        "REST APIs (Understanding Endpoints & Requests)",
+        "Python (Basic Programming Knowledge)",
+        "Backend Development (Foundational Understanding)",
+        "Databases & SQL (Basic Knowledge / Project Exposure)",
       ],
     },
     {
-      title: "Cloud & DevOps Exposure",
+      title: "Cloud & DevOps",
       level: "Practical Project Experience",
-      experienceType: "Project Implementation & Pipeline Configuration",
+      experienceType: "Containerization & CI/CD Pipelines",
       description:
-        "Hands-on project exposure containerizing a web application with Docker, configuring automated CI/CD workflows, and setting up an AWS deployment demonstration workflow.",
+        "Practical project experience containerizing local and staging runtimes using Docker, and automating testing and build workflows using GitHub Actions. Hands-on project exposure to AWS cloud services (EC2, ECR) rather than enterprise-scale expertise.",
       skills: [
-        "AWS (EC2, ECR, IAM, SSM — Project-level deployment automation)",
-        "Docker & Docker Compose (Containerizing local & staging runtimes)",
-        "GitHub Actions (Configuring automated build & test workflows)",
-        "CI/CD Workflow Concepts",
+        "Docker (Practical Project Experience)",
+        "GitHub Actions (Practical CI/CD Experience)",
+        "AWS (Project Exposure)",
       ],
     },
     {
-      title: "Security & Code Quality",
-      level: "Practical Project Experience",
-      experienceType: "Pipeline Quality Gate Integration",
+      title: "Developer Tools & Fundamentals",
+      level: "Core Fundamentals",
+      experienceType: "Version Control & CLI Operations",
       description:
-        "Practical experience integrating automated static code analysis into continuous integration pipelines to check for code smells, bugs, and common security weaknesses.",
+        "Core version control workflows for managing source code and collaborative branches, combined with command-line fundamentals for Linux directory navigation and shell operations.",
       skills: [
-        "SonarQube (Static code analysis & quality gate integration)",
-        "DevSecOps Concepts (Embedding automated checks into delivery)",
-        "Static Code Scanning Awareness",
-      ],
-    },
-    {
-      title: "Databases & Storage",
-      level: "Foundational & Project Experience",
-      experienceType: "Relational Queries & File Storage",
-      description:
-        "Familiar with relational table structures, basic SQL queries, schema concepts, and structured JSON file storage for lightweight offline applications.",
-      skills: [
-        "MySQL (Basic relational tables, schema structure & simple queries)",
-        "PostgreSQL (Exposure to relational schema setup in collaborative work)",
-        "JSON-based File Storage (Practical local data persistence)",
-      ],
-    },
-    {
-      title: "AI Development Tools & Version Control",
-      level: "Active Daily Workflow",
-      experienceType: "Architectural Understanding & AI-Assisted Engineering",
-      description:
-        "Regularly leverage AI coding assistants to accelerate learning, debug errors, and understand system workflows. Focus on explaining architecture and code changes rather than blindly accepting generated code.",
-      skills: [
-        "ChatGPT",
-        "Gemini",
-        "Claude",
-        "Antigravity",
-        "Git & GitHub Workflows",
-        "Linux Fundamentals (Basic shell commands & directory navigation)",
+        "Git & GitHub (Fundamentals)",
+        "Linux (Fundamentals / CLI)",
       ],
     },
   ] satisfies SkillCategory[],
@@ -195,31 +165,27 @@ export const projects: {
   flagship: {
     title: "Cloud-Based DevSecOps Platform",
     featured: true,
+    status: "In Progress",
     description:
-      "A cloud-based platform built with Flask that brings application health monitoring, CI/CD automation, and security checks directly into the software delivery workflow.",
+      "An in-progress cloud-based platform prototype built with Flask to experiment with application health monitoring, CI/CD automation, and security scanning in software delivery workflows.",
     problemSolved:
       "Modern development workflows frequently separate application code from automated security analysis and cloud deployment, increasing the risk of unpatched vulnerabilities and broken production releases.",
     contribution:
-      "Worked on the Flask dashboard for health monitoring, containerized the application with Docker and Docker Compose, configured GitHub Actions workflows for automated testing and SonarQube static code checks, and set up a project-level AWS deployment demonstration workflow using EC2, ECR, and SSM.",
+      "Building a lightweight Flask dashboard for health monitoring, containerizing the application with Docker and Docker Compose, configuring GitHub Actions workflows for automated testing and initial SonarQube static code checks, and configuring an AWS deployment workflow prototype using EC2 and ECR.",
     highlights: [
-      "Flask dashboard implementation to display application health metrics and deployment activity.",
-      "Docker containerization using Dockerfile and Docker Compose for consistent local development and staging environments.",
-      "Automated CI/CD pipeline using GitHub Actions with integrated SonarQube static code quality analysis.",
-      "Configured an automated project deployment workflow using GitHub Actions, pushing container images to Amazon ECR and triggering EC2 instance updates via AWS Systems Manager (SSM).",
+      "Flask dashboard prototype to display application health status and development activity.",
+      "Docker containerization using Dockerfile and Docker Compose for consistent local development environments.",
+      "Initial CI/CD pipeline setup using GitHub Actions with static code quality analysis experimentation.",
+      "Configuring AWS deployment workflow concepts with Amazon ECR and EC2 container hosting.",
     ],
     stack: [
       "Python",
       "Flask",
       "Docker",
       "Docker Compose",
-      "AWS EC2",
-      "AWS ECR",
-      "AWS IAM",
-      "AWS SSM",
       "GitHub Actions",
+      "AWS (EC2, ECR)",
       "SonarQube",
-      "MySQL",
-      "JavaScript",
       "HTML/CSS",
     ],
     repoUrl: "https://github.com/mohdshahid7033/cloud-devsecops-platform",
@@ -228,13 +194,12 @@ export const projects: {
     {
       title: "Hotel Management System",
       featured: false,
-      collaboration: "Jointly developed by Mohd Shahid Moin Uddin and Abaid Khan.",
       description:
-        "A desktop hotel management application designed to manage hotel operations, bookings, guest information, staff, room availability, and revenue reports.",
+        "A desktop hotel management application designed to manage front-desk hotel operations, room bookings, guest records, room availability, and revenue reports.",
       problemSolved:
-        "Small-to-medium hotels need a dependable, lightweight desktop system to manage room reservations, guest logs, staff assignments, and billing without relying on complex cloud databases.",
+        "Small-to-medium hospitality establishments need a dependable, lightweight desktop system to manage room reservations, guest logs, and billing without relying on complex cloud infrastructure.",
       contribution:
-        "Co-developed the desktop graphical interface using Python Tkinter, constructed reservation and guest check-in/checkout workflows, implemented JSON data persistence handlers, and collaborated on revenue reporting.",
+        "Implemented desktop graphical user interfaces using Python Tkinter, constructed room reservation and guest check-in/checkout workflows, built JSON data persistence handlers, and assisted with revenue calculation logic.",
       highlights: [
         "Constructed an intuitive desktop GUI using Python Tkinter for front-desk operations.",
         "Implemented modules for room booking, guest management, check-in, checkout, and live room availability tracking.",
@@ -251,13 +216,13 @@ export const projects: {
       repoUrl: "https://github.com/mohdshahid7033/HOTEL-MANAGEMENT-SYSTEM",
     },
     {
-      title: "National Land Acquisition and Management System",
+      title: "National Land Acquisition and Management System (MLAMS)",
       featured: false,
       collaboration: "Collaborative project developed with Abaid Khan.",
       description:
-        "A multi-module land acquisition and records system featuring GIS parcel boundary visualization, digital acquisition workflow tracking, compensation calculations, and centralized reporting.",
+        "A multi-module web-based land acquisition and records system prototype featuring GIS parcel boundary visualization, digital acquisition workflow tracking, compensation calculations, and centralized reporting.",
       problemSolved:
-        "Large-scale infrastructure land acquisition involves multi-stage administrative approvals, complex geographic parcel boundaries, and transparent entitlement calculations that require organized data management.",
+        "Large-scale infrastructure land acquisition involves multi-stage administrative approvals, complex geographic parcel boundaries, and transparent entitlement calculations that require organized digital data management.",
       contribution:
         "Collaborated with co-developer Abaid Khan on reviewing and integrating frontend GIS map displays for land parcel boundaries, assisted with testing Node.js/Express API route endpoints, and supported PostgreSQL schema organization for compensation records.",
       highlights: [

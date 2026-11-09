@@ -68,13 +68,13 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 sm:p-8"
+      className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-4 sm:p-6 md:p-8"
     >
-      <div className="mb-6">
-        <h3 className="text-lg font-bold text-white">Send a Direct Message</h3>
+      <div className="mb-5 sm:mb-6">
+        <h3 className="text-base sm:text-lg font-bold text-white">Send a Direct Message</h3>
         <p className="text-xs text-zinc-400 mt-1">
           Fill in the details below. Submitting will format and dispatch your message directly to{" "}
-          <strong className="text-emerald-400">{profile.email}</strong> via your email client.
+          <strong className="text-emerald-400 break-all">{profile.email}</strong> via your email client.
         </p>
       </div>
 
@@ -199,10 +199,10 @@ export default function ContactForm() {
         </div>
 
         {/* Action Button & Status */}
-        <div className="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
           <button
             type="submit"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-400 px-7 py-3 text-xs font-bold text-black transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 shadow-md shadow-emerald-500/20"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-emerald-400 px-7 py-3.5 sm:py-3 text-xs font-bold text-black transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 shadow-md shadow-emerald-500/20"
           >
             <span>Compose Email</span>
             <Send size={14} aria-hidden="true" />
@@ -211,7 +211,7 @@ export default function ContactForm() {
           <button
             type="button"
             onClick={handleCopyEmail}
-            className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-emerald-400 transition"
+            className="inline-flex items-center justify-center gap-1.5 text-xs text-zinc-400 hover:text-emerald-400 transition py-2"
           >
             <Copy size={13} />
             <span>{copied ? "Email Copied!" : "Copy Email Address"}</span>

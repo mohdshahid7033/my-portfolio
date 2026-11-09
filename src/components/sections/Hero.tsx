@@ -17,7 +17,7 @@ export default function Hero() {
     <>
       <section
         id="home"
-        className="relative mx-auto grid min-h-[82vh] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-12 lg:gap-8 lg:px-12 lg:py-16"
+        className="relative mx-auto grid min-h-[82vh] max-w-7xl items-center gap-8 sm:gap-12 lg:gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-12 lg:px-12 lg:py-16"
       >
         {/* Subtle background glow */}
         <div
@@ -33,52 +33,52 @@ export default function Hero() {
           className="relative z-10 lg:col-span-7"
         >
           {/* Opportunity status badge */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-semibold text-emerald-300">
-            <span className="relative flex h-2 w-2">
+          <div className="mb-4 sm:mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-semibold text-emerald-300 leading-tight">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            <span>{profile.opportunityStatus}</span>
+            <span className="text-left">{profile.opportunityStatus}</span>
           </div>
 
           {/* Deliberate Two-Line Name Formatting */}
-          <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl text-white">
+          <h1 className="text-[1.65rem] min-[360px]:text-3xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-tight sm:leading-none">
             <span className="block whitespace-nowrap">MOHD SHAHID</span>
             <span className="block whitespace-nowrap text-emerald-400">MOIN UDDIN</span>
           </h1>
 
           {/* Final Professional Positioning */}
-          <div className="mt-4 space-y-1">
-            <h2 className="text-xl font-bold text-zinc-100 sm:text-2xl">
+          <div className="mt-3 sm:mt-4 space-y-1">
+            <h2 className="text-lg font-bold text-zinc-100 sm:text-2xl">
               {profile.headline}
             </h2>
-            <p className="text-sm font-medium text-emerald-400">
+            <p className="text-xs sm:text-sm font-medium text-emerald-400">
               Frontend-focused with Python &amp; DevOps Project Experience
             </p>
           </div>
 
           {/* Supporting Professional Description */}
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-zinc-300">
+          <p className="mt-4 sm:mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-zinc-300">
             {profile.supportingDescription}
           </p>
 
           {/* Status & Location Pill */}
-          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-400">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-2 text-xs text-zinc-400">
             <span className="flex items-center gap-1.5">
-              <MapPin size={14} className="text-emerald-400" aria-hidden="true" />
+              <MapPin size={14} className="text-emerald-400 shrink-0" aria-hidden="true" />
               {profile.location}
             </span>
             <span className="hidden sm:inline text-zinc-600">•</span>
-            <span className="rounded-full bg-zinc-900 border border-zinc-800 px-3 py-1 text-zinc-300">
+            <span className="rounded-full bg-zinc-900 border border-zinc-800 px-3 py-1 text-zinc-300 text-[11px] sm:text-xs">
               🎓 Final-Year BCA (2027) · Osmania University
             </span>
           </div>
 
-          {/* Action Buttons */}
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          {/* Action Buttons - Stacked on compact mobile, row on tablet/desktop */}
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-6 py-3.5 text-xs font-bold text-black transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 shadow-md shadow-emerald-500/20"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-emerald-400 px-6 py-3.5 text-xs font-bold text-black transition hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 shadow-md shadow-emerald-500/20"
             >
               <span>Explore Projects</span>
               <ArrowRight size={15} aria-hidden="true" />
@@ -86,7 +86,7 @@ export default function Hero() {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-6 py-3.5 text-xs font-semibold text-zinc-200 transition hover:border-emerald-400 hover:text-white hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-6 py-3.5 text-xs font-semibold text-zinc-200 transition hover:border-emerald-400 hover:text-white hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
               <span>Contact Me</span>
             </a>
@@ -96,16 +96,16 @@ export default function Hero() {
               <a
                 href={profile.resumeUrl}
                 download="resume.pdf"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-5 py-3.5 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-400 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-5 py-3.5 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-400 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               >
                 <Download size={14} />
                 <span>Download Resume</span>
               </a>
             ) : (
-              <div className="relative group">
+              <div className="relative group w-full sm:w-auto">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-700 bg-zinc-900/50 px-5 py-3.5 text-xs font-medium text-zinc-400 cursor-not-allowed"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-dashed border-zinc-700 bg-zinc-900/50 px-5 py-3.5 text-xs font-medium text-zinc-400 cursor-not-allowed"
                   title="Place resume.pdf in public/ folder to enable instant download"
                 >
                   <FileText size={14} className="text-zinc-500" />
@@ -119,7 +119,7 @@ export default function Hero() {
           </div>
 
           {/* Social Profiles */}
-          <div className="mt-8 flex flex-wrap items-center gap-4 pt-6 border-t border-zinc-800/80">
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-4 pt-5 sm:pt-6 border-t border-zinc-800/80">
             <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
               Profiles:
             </span>
@@ -128,7 +128,7 @@ export default function Hero() {
               href={profile.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-3.5 py-1.5 text-xs text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-3.5 py-1.5 text-xs text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400 min-h-[36px]"
             >
               <GithubIcon size={14} />
               <span>GitHub</span>
@@ -138,7 +138,7 @@ export default function Hero() {
               href={profile.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-3.5 py-1.5 text-xs text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-3.5 py-1.5 text-xs text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400 min-h-[36px]"
             >
               <LinkedinIcon size={14} />
               <span>LinkedIn</span>
@@ -159,23 +159,23 @@ export default function Hero() {
           {/* Container Card */}
           <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-[#0e1411]/90 shadow-2xl backdrop-blur-md">
             {/* Header: Explicitly identified as Architecture Illustration */}
-            <div className="flex items-center justify-between border-b border-zinc-800/80 bg-zinc-900/80 px-4 py-3">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
-                <span className="ml-2 font-mono text-[11px] text-zinc-400">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 bg-zinc-900/80 px-3.5 sm:px-4 py-2.5 sm:py-3 gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-red-500/80" />
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500/80" />
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500/80" />
+                <span className="ml-1.5 sm:ml-2 font-mono text-[11px] text-zinc-400 truncate">
                   architecture-concept.draw
                 </span>
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 bg-zinc-800/80 rounded px-2 py-0.5">
-                <Sparkles size={11} className="text-emerald-400" />
+              <div className="shrink-0 flex items-center gap-1.5 text-[10px] font-mono text-zinc-400 bg-zinc-800/80 rounded px-2 py-0.5">
+                <Sparkles size={11} className="text-emerald-400 shrink-0" />
                 <span>design illustration</span>
               </div>
             </div>
 
             {/* Genuine Image Asset */}
-            <div className="relative p-3 bg-gradient-to-b from-transparent to-[#070b08]/80">
+            <div className="relative p-2.5 sm:p-3 bg-gradient-to-b from-transparent to-[#070b08]/80">
               <img
                 src="/cloud-devops-hero.png"
                 alt="Cloud DevOps and DevSecOps architecture concept visual"
@@ -185,34 +185,34 @@ export default function Hero() {
             </div>
 
             {/* Clear design illustration concept footer */}
-            <div className="border-t border-zinc-800/80 bg-zinc-950/70 p-4 space-y-2">
-              <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
-                <Layers size={11} className="text-emerald-400" />
-                Conceptual Pipeline &amp; Deployment Topology
+            <div className="border-t border-zinc-800/80 bg-zinc-950/70 p-3.5 sm:p-4 space-y-2">
+              <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5 truncate">
+                <Layers size={11} className="text-emerald-400 shrink-0" />
+                <span className="truncate">Conceptual Pipeline &amp; Deployment Topology</span>
               </p>
 
-              <div className="flex items-center justify-between text-xs pt-1">
-                <span className="flex items-center gap-2 text-zinc-400 font-mono">
-                  <GitBranch size={13} className="text-emerald-400" />
+              <div className="flex items-center justify-between text-xs pt-1 gap-2">
+                <span className="flex items-center gap-2 text-zinc-400 font-mono text-[11px] sm:text-xs truncate">
+                  <GitBranch size={13} className="text-emerald-400 shrink-0" />
                   GitHub Actions CI/CD
                 </span>
-                <span className="text-zinc-400 font-mono text-[11px]">Pipeline Design</span>
+                <span className="text-zinc-400 font-mono text-[10px] sm:text-[11px] shrink-0">Pipeline Design</span>
               </div>
 
-              <div className="flex items-center justify-between text-xs">
-                <span className="flex items-center gap-2 text-zinc-400 font-mono">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <div className="flex items-center justify-between text-xs gap-2">
+                <span className="flex items-center gap-2 text-zinc-400 font-mono text-[11px] sm:text-xs truncate">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0" />
                   SonarQube Quality Gate
                 </span>
-                <span className="text-zinc-400 font-mono text-[11px]">Security Scan</span>
+                <span className="text-zinc-400 font-mono text-[10px] sm:text-[11px] shrink-0">Security Scan</span>
               </div>
 
-              <div className="flex items-center justify-between text-xs">
-                <span className="flex items-center gap-2 text-zinc-400 font-mono">
-                  <Terminal size={12} className="text-emerald-400" />
+              <div className="flex items-center justify-between text-xs gap-2">
+                <span className="flex items-center gap-2 text-zinc-400 font-mono text-[11px] sm:text-xs truncate">
+                  <Terminal size={12} className="text-emerald-400 shrink-0" />
                   Docker &amp; AWS EC2 / ECR
                 </span>
-                <span className="text-zinc-400 font-mono text-[11px]">Container Host</span>
+                <span className="text-zinc-400 font-mono text-[10px] sm:text-[11px] shrink-0">Container Host</span>
               </div>
             </div>
           </div>
@@ -224,11 +224,11 @@ export default function Hero() {
         aria-label="Verified Technologies"
         className="border-y border-zinc-800/80 bg-zinc-950/40"
       >
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 py-5 text-xs font-semibold tracking-widest text-zinc-400 lg:justify-between lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 lg:gap-x-8 gap-y-2.5 px-4 sm:px-6 py-4 sm:py-5 text-[11px] sm:text-xs font-semibold tracking-wider text-zinc-400 lg:justify-between lg:px-12">
           {techStrip.map((tech) => (
             <span
               key={tech}
-              className="flex items-center gap-2 transition hover:text-emerald-400"
+              className="flex items-center gap-1.5 sm:gap-2 transition hover:text-emerald-400"
             >
               <span className="h-1 w-1 rounded-full bg-emerald-500/60" />
               {tech}

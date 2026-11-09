@@ -47,6 +47,7 @@ export type Project = {
   problemSolved: string;
   contribution: string;
   featured: boolean;
+  status?: string;
   highlights: string[];
   stack: string[];
   repoUrl: string;

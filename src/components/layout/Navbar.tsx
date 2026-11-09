@@ -43,14 +43,14 @@ export default function Navbar() {
     >
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12"
+        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-12"
       >
         {/* Brand / Logo */}
         <a
           href="#home"
-          className="group flex items-center gap-3 text-lg font-bold tracking-tight text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+          className="group flex items-center gap-2.5 sm:gap-3 text-lg font-bold tracking-tight text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-sm font-bold text-emerald-400 shadow-sm transition group-hover:border-emerald-400/60 group-hover:bg-emerald-500/20">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-sm font-bold text-emerald-400 shadow-sm transition group-hover:border-emerald-400/60 group-hover:bg-emerald-500/20 shrink-0">
             {profile.initials}
           </span>
           <span className="hidden sm:inline-block font-semibold tracking-normal text-zinc-200 group-hover:text-white transition">
@@ -95,10 +95,10 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - min 44x44px touch target */}
         <button
           type="button"
-          className="rounded-lg border border-zinc-700/80 p-2 text-zinc-300 transition hover:border-emerald-400 hover:text-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 md:hidden"
+          className="flex items-center justify-center min-h-[44px] min-w-[44px] rounded-lg border border-zinc-700/80 p-2.5 text-zinc-300 transition hover:border-emerald-400 hover:text-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 md:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -116,7 +116,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         hidden={!menuOpen}
-        className="border-t border-zinc-800/80 bg-[#090d0b]/98 px-6 py-5 md:hidden backdrop-blur-lg"
+        className="border-t border-zinc-800/80 bg-[#090d0b]/98 px-4 py-4 sm:px-6 sm:py-5 md:hidden backdrop-blur-lg"
       >
         <ul className="space-y-1">
           {navItems.map((item) => (
@@ -124,7 +124,7 @@ export default function Navbar() {
               <a
                 href={`#${item.id}`}
                 onClick={() => setMenuOpen(false)}
-                className={`block rounded-lg px-3 py-2 text-base font-medium transition ${
+                className={`flex items-center min-h-[44px] rounded-lg px-3.5 py-2.5 text-base font-medium transition ${
                   activeId === item.id
                     ? "bg-emerald-500/10 text-emerald-400 font-semibold"
                     : "text-zinc-300 hover:bg-zinc-800/50 hover:text-white"
@@ -137,18 +137,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="mt-5 pt-4 border-t border-zinc-800 flex flex-col gap-3">
+        <div className="mt-4 pt-4 border-t border-zinc-800 flex flex-col gap-3">
           <div className="flex items-center gap-2 text-xs text-zinc-400 px-3">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            <span>Open to Internships & Junior Roles</span>
+            <span>Open to Internships &amp; Junior Roles</span>
           </div>
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="flex items-center justify-center gap-2 rounded-full bg-emerald-400 px-4 py-2.5 text-center text-sm font-semibold text-black transition hover:bg-emerald-300"
+            className="flex items-center justify-center min-h-[44px] gap-2 rounded-full bg-emerald-400 px-4 py-2.5 text-center text-sm font-semibold text-black transition hover:bg-emerald-300"
           >
             <span>Let's Connect</span>
             <ArrowUpRight size={15} aria-hidden="true" />
